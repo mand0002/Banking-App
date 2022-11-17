@@ -15,7 +15,7 @@ function create(name, email, password) {
     // TODO: populate this function based off the video
     return new Promise((resolve, reject) => {
         const collection = db.collection('users');
-        const doc = {name, email, password, balance: 0};
+        const doc = {name, email, password, balance: 10};
         collection.insertOne(doc, {w:1}, function(err, result) {
             err ? reject(err) : resolve(doc);
         });
