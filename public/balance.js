@@ -23,6 +23,7 @@ function BalanceMsg(props){
       onClick={() => {
         props.setShow(true);
         props.setStatus('');
+        props.setBalance('');
       }}>
         Check balance again
     </button>

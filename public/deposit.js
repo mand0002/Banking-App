@@ -16,14 +16,14 @@ function Deposit(){
 
 function DepositMsg(props){
   return (<>
-    <h5>Success</h5>
+    <h5>Deposit Successfull!</h5>
     <button type="submit" 
       className="btn btn-light" 
       onClick={() => {
           props.setShow(true);
           props.setStatus('');
       }}>
-        Deposit again
+        Deposit Additional Funds
     </button>
   </>);
 } 
@@ -38,6 +38,11 @@ function DepositForm(props){
     .then(text => {
         try {
             const data = JSON.parse(text);
+            //for (var i = 0; i < data.length; i++) {
+            //  console.log(stringify[i]['balance']);
+            // props.setStatus(JSON.stringify(data[balance].value));
+            // props.setStatus(data[i]['balance']);             
+            //}
             props.setStatus(JSON.stringify(data.value));
             props.setShow(false);
             console.log('JSON:', data);
